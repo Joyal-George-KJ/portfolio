@@ -1,5 +1,7 @@
 import React, { useEffect, useState } from "react";
 import Effects from "./components/Effects";
+import Header from "./components/Header";
+import Main from "./components/Main";
 
 function App() {
     const [height, setHeight] = useState(0);
@@ -12,7 +14,8 @@ function App() {
     }, []);
     return (
         <main>
-            <h1>React 18 App</h1>
+            <Header />
+            <Main />
             <Effects height={height} width={width} />
         </main>
     );
