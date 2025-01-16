@@ -1,5 +1,5 @@
 import React, { lazy, Suspense } from "react";
-import { BrowserRouter, Route, Routes } from "react-router-dom";
+import { HashRouter, Route, Routes } from "react-router-dom";
 const Home = lazy(() => import("./screens/Home"));
 const Layout = lazy(() => import("./screens/Layout"));
 const Blog = lazy(() => import("./screens/Blog"));
@@ -8,7 +8,7 @@ const About = lazy(() => import("./screens/About"));
 
 function App() {
     return (
-        <BrowserRouter>
+        <HashRouter>
             <Routes>
                 <Route path="/" element={<Layout />}>
                     <Route
@@ -45,7 +45,7 @@ function App() {
                     />
                 </Route>
             </Routes>
-        </BrowserRouter>
+        </HashRouter>
     );
 }
 
