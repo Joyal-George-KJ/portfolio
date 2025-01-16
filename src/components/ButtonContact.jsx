@@ -28,7 +28,7 @@ function ButtonContact({ url, displayName, hoverName }) {
     }
 
     return (
-        <a href={url} className="rounded-full flex justify-center border relative bg-neutral-300">
+        <a href={url} className="rounded-full flex justify-center shadow-neutral-100 shadow-md relative bg-neutral-300">
             <img
                 className="w-8"
                 onMouseEnter={(e) => setIsHovered(e.target.alt)}
@@ -40,7 +40,7 @@ function ButtonContact({ url, displayName, hoverName }) {
                 <span 
                     onMouseEnter={(e) => setIsHovered(displayName)}
                     onMouseLeave={() => setIsHovered("")}
-                    className="absolute -left-3/5 z-30 top-12 px-2 py-1 w-max bg-neutral-200 text-neutral-900 font-bold text-sm">
+                    className="absolute rounded -left-3/5 z-30 top-12 px-2 py-1 w-max bg-neutral-200 text-neutral-900 font-bold text-sm">
                     {hoverName}
                 </span>
             )}

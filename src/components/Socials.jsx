@@ -20,7 +20,7 @@ function Socials() {
         url: "https://x.com/JoyalGeorgeKJ",
     }, {
         displayName: "Whatsapp",
-        hoverName: "+91 8921223436",
+        hoverName: "+918921223436",
         url: "https://api.whatsapp.com/send?phone=918921223436&text=Hey",
     }, {
         displayName: "Email",
@@ -29,7 +29,7 @@ function Socials() {
     }];
 
     return (
-        <div className="flex gap-4 pt-8">
+        <div className="flex gap-4 pt-6">
             {socialInfos.map((socialInfo, index) => (
                 <ButtonContact key={index} {...socialInfo} />
             ))}
