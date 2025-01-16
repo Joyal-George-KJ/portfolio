@@ -49,8 +49,6 @@ function Effects(props) {
                 if (star.x > canvasWidth || star.y > canvasHeight || star.y < 0) {
                     star.x = Math.random() * canvasWidth;
                     star.y = Math.random() * canvasHeight;
-                    console.log(star);
-                    
                     star.isShooting = false;
                 }
             }
