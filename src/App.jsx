@@ -1,23 +1,51 @@
-import React, { useEffect, useState } from "react";
-import Effects from "./components/Effects";
-import Header from "./components/Header";
-import Main from "./components/Main";
+import React, { lazy, Suspense } from "react";
+import { BrowserRouter, Route, Routes } from "react-router-dom";
+const Home = lazy(() => import("./screens/Home"));
+const Layout = lazy(() => import("./screens/Layout"));
+const Blog = lazy(() => import("./screens/Blog"));
+const Project = lazy(() => import("./screens/Project"));
+const About = lazy(() => import("./screens/About"));
 
 function App() {
-    const [height, setHeight] = useState(0);
-    const [width, setWidth] = useState(0);
-
-    useEffect(() => {
-        setHeight(window.innerHeight);
-        setWidth(window.innerWidth);
-        console.log();
-    }, []);
     return (
-        <main>
-            <Header />
-            <Main />
-            <Effects height={height} width={width} />
-        </main>
+        <BrowserRouter>
+            <Routes>
+                <Route path="/" element={<Layout />}>
+                    <Route
+                        index
+                        element={
+                            <Suspense fallback={<span>Loading...</span>}>
+                                <Home />
+                            </Suspense>
+                        }
+                    />
+                    <Route
+                        path="/blog"
+                        element={
+                            <Suspense fallback={<span>Loading...</span>}>
+                                <Blog />
+                            </Suspense>
+                        }
+                    />
+                    <Route
+                        path="/project"
+                        element={
+                            <Suspense fallback={<span>Loading...</span>}>
+                                <Project />
+                            </Suspense>
+                        }
+                    />
+                    <Route
+                        path="/about"
+                        element={
+                            <Suspense fallback={<span>Loading...</span>}>
+                                <About />
+                            </Suspense>
+                        }
+                    />
+                </Route>
+            </Routes>
+        </BrowserRouter>
     );
 }
 

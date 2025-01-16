@@ -29,7 +29,7 @@ function Socials() {
     }];
 
     return (
-        <div className="flex gap-4 pt-6">
+        <div className="flex justify-center gap-4 pt-6">
             {socialInfos.map((socialInfo, index) => (
                 <ButtonContact key={index} {...socialInfo} />
             ))}
