@@ -38,7 +38,7 @@ function ButtonContact({ url, displayName, hoverName }) {
                 />
             {isHovered?.indexOf(displayName) !== -1 && (
                 <span 
-                    onMouseEnter={(e) => setIsHovered(displayName)}
+                    onMouseEnter={() => setIsHovered(displayName)}
                     onMouseLeave={() => setIsHovered("")}
                     className="absolute rounded -left-3/5 z-30 top-12 px-2 py-1 w-max bg-neutral-200 text-neutral-900 font-bold text-sm">
                     {hoverName}
