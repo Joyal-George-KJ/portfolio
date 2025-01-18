@@ -2,6 +2,7 @@ import React, { useEffect, useState } from "react";
 import Header from "../components/Header";
 import Effects from "../components/Effects";
 import { Outlet } from "react-router-dom";
+import Footer from "../components/Footer";
 
 function Layout() {
     const [height, setHeight] = useState(0);
@@ -15,9 +16,10 @@ function Layout() {
 
     return (
         <div>
-            <Header />
             <Effects height={height} width={width} />
+            <Header />
             <Outlet />
+            <Footer />
         </div>
     );
 }

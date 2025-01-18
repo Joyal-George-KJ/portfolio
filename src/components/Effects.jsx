@@ -95,7 +95,7 @@ function Effects(props) {
         };
     }, []);
 
-    return <canvas className="absolute top-0 bottom-0 right-0 left-0 bg-neutral-800 -z-20" ref={ref} {...props}></canvas>;
+    return <canvas className="fixed top-0 bottom-0 right-0 left-0 bg-neutral-800 -z-30" ref={ref} {...props}></canvas>;
 }
 
 export default Effects;
