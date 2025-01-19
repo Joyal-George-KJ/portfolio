@@ -6,57 +6,37 @@ function Header() {
     const [width, setWidth] = useState(window.innerWidth);
 
     return (
-        <div className="z-30">
-            <nav className="flex justify-between z-30 items-center py-4 px-8  font-mono bg-transparent backdrop-blur-md text-neutral-200 mobile:text-base tablet:text-xl pl-8">
+        <div className="relative z-30">
+            <nav className="flex justify-between items-center py-4 px-8 font-mono bg-transparent backdrop-blur-md text-neutral-200 mobile:text-base tablet:text-xl pl-8">
                 <li className="cursor-pointer list-none">
-                    <Link to="/">Joyal George K J</Link>
+                    <Link to="/" className="mobile:text-base tablet:text-xl">Joyal George K J</Link>
                 </li>
 
                 <ul
-                    className={`flex z-30 ${
+                    className={`flex ${
                         !toggle
                             ? "justify-center"
-                            : "flex-col absolute items-start right-0 p-4 z-30 bg-neutral-900 py-12 h-max top-0 left-0 bottom-0 w-full"
-                    } gap-8 text-xl bg-transparent backdrop-blur-md text-neutral-200`}
+                            : "flex-col absolute items-start right-0 p-4 h-max pt-4 bg-neutral-900 py-12 top-0 left-0 bottom-0 w-full z-40"
+                    } gap-8 text-xl backdrop-blur-md text-neutral-200`}
                 >
                     <button
                         onClick={() => setToggle(!toggle)}
-                        className={`cursor-pointer ${toggle && "px-2 w-max"}`}
+                        className="cursor-pointer px-2 text-xl z-50"
                     >
-                        <i
-                            className={`text-xl bi bi-${
-                                !toggle ? "list" : "x-lg"
-                            }`}
-                        ></i>
+                        <i className={`bi bi-${!toggle ? "list" : "x-lg"}`}></i>
                     </button>
                     {toggle && (
                         <>
-                            <li
-                                className={`cursor-pointer ${
-                                    toggle && "px-2 w-max"
-                                }`}
-                            >
+                            <li className="cursor-pointer px-2 w-max">
                                 <Link to="/blog">Blog</Link>
                             </li>
-                            <li
-                                className={`cursor-pointer ${
-                                    toggle && "px-2 w-max"
-                                }`}
-                            >
+                            <li className="cursor-pointer px-2 w-max">
                                 <Link to="/project">Project</Link>
                             </li>
-                            <li
-                                className={`cursor-pointer ${
-                                    toggle && "px-2 w-max"
-                                }`}
-                            >
+                            <li className="cursor-pointer px-2 w-max">
                                 <Link to="/about">About</Link>
                             </li>
-                            <li
-                                className={`cursor-pointer ${
-                                    toggle && "px-2 w-max"
-                                }`}
-                            >
+                            <li className="cursor-pointer px-2 w-max">
                                 <button>Login</button>
                             </li>
                         </>

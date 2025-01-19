@@ -28,19 +28,23 @@ function ButtonContact({ url, displayName, hoverName }) {
     }
 
     return (
-        <a href={url} className="rounded-full flex justify-center mobile:w-6 laptop:w-8 aspect-square  shadow-neutral-100 shadow-md relative bg-neutral-300">
+        <a
+            href={url}
+            className="rounded-full flex justify-center mobile:w-6 laptop:w-8 aspect-square border shadow-neutral-100 shadow-md relative bg-neutral-300 z-5"
+        >
             <img
                 className="object-cover rounded-full"
                 onMouseEnter={(e) => setIsHovered(e.target.alt)}
                 onMouseLeave={() => setIsHovered("")}
                 src={getImg(displayName)}
                 alt={displayName + " Logo"}
-                />
+            />
             {isHovered?.indexOf(displayName) !== -1 && (
-                <span 
+                <span
                     onMouseEnter={() => setIsHovered(displayName)}
                     onMouseLeave={() => setIsHovered("")}
-                    className="absolute rounded -left-3/5 top-12 px-2 py-1 w-max bg-neutral-200 text-neutral-900 font-bold text-sm">
+                    className="absolute rounded -left-3/5 top-12 px-2 py-1 w-max bg-neutral-200 text-neutral-900 font-bold text-sm z-10"
+                >
                     {hoverName}
                 </span>
             )}
