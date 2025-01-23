@@ -16,12 +16,12 @@ function Header() {
                     className={`flex ${
                         !toggle
                             ? "justify-center"
-                            : "flex-col absolute items-start right-0 p-4 h-max pt-4 bg-neutral-900 py-12 top-0 left-0 bottom-0 w-full z-40"
-                    } gap-8 text-xl backdrop-blur-md text-neutral-200`}
+                            : "flex-col absolute items-end right-0 p-4 pt-4 bg-neutral-800 py-12 top-0 h-screen mobile:w-3/4 laptop:w-full z-40"
+                    } gap-8 laptop:text-xl backdrop-blur-md text-neutral-200`}
                 >
                     <button
                         onClick={() => setToggle(!toggle)}
-                        className="cursor-pointer px-2 text-xl z-50"
+                        className={`${toggle && 'px-2'} cursor-pointer text-xl z-50`}
                     >
                         <i className={`bi bi-${!toggle ? "list" : "x-lg"}`}></i>
                     </button>
