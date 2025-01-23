@@ -28,13 +28,13 @@ function Header() {
                     {toggle && (
                         <>
                             <li className="cursor-pointer px-2 w-max">
-                                <Link to="/blog">Blog</Link>
+                                <Link onClick={() => setToggle(!toggle)} to="/blog">Blog</Link>
                             </li>
                             <li className="cursor-pointer px-2 w-max">
-                                <Link to="/project">Project</Link>
+                                <Link onClick={() => setToggle(!toggle)} to="/project">Project</Link>
                             </li>
                             <li className="cursor-pointer px-2 w-max">
-                                <Link to="/about">About</Link>
+                                <Link onClick={() => setToggle(!toggle)} to="/about">About</Link>
                             </li>
                             <li className="cursor-pointer px-2 w-max">
                                 <button>Login</button>
