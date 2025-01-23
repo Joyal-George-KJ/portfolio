@@ -9,8 +9,8 @@ function Layout() {
     const [width, setWidth] = useState(0);
 
     useEffect(() => {
-        setHeight(window.innerHeight);
-        setWidth(window.innerWidth);
+        setHeight( window.innerHeight);
+        setWidth(window.scrollbars.visible? window.innerWidth - (window.innerWidth - document.body.clientWidth - 1) : window.innerWidth);
         console.log();
     }, []);
 
