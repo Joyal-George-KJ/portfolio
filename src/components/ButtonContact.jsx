@@ -31,7 +31,7 @@ function ButtonContact({ url, displayName, hoverName }) {
         <a
             href={url}
             target="_blank"
-            className="rounded-full flex justify-center mobile:w-6 laptop:w-8 aspect-square border shadow-neutral-100 shadow-md relative bg-neutral-300 z-5"
+            className="rounded-full flex justify-center mobile:w-6 laptop:w-8 mobile:aspect-square border shadow-neutral-100 shadow-md relative bg-neutral-300 z-5"
         >
             <img
                 className="object-cover rounded-full"

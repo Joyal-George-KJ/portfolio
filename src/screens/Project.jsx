@@ -3,7 +3,7 @@ import GitHubLogo from "../assets/img/github.png";
 function Project() {
     return (
         <div className="text-neutral-200 mobile:p-8 laptop:p-24">
-            <h2 className="text-4xl mobile:py-4 mobile:text-xl laptop:pb-12 font-bold">Projects</h2>
+            <h2 className="mobile:text-lg mobile:py-4 laptop:text-4xl laptop:pb-12 font-bold">Projects</h2>
             <div className="project-container">
                 <div className="project-card shadow-sm shadow-neutral-300 p-4 rounded-lg backdrop-blur">
                     <div className="flex justify-between items-center">
@@ -14,7 +14,7 @@ function Project() {
                     </div>
                     <div className="flex mobile:flex-col laptop:flex-row gap-4 pt-4">
                         <img
-                            className="mobile:w-full laptop:w-2/4 rounded-lg"
+                            className="mobile:w-full min-h-[100%] laptop:w-2/4 rounded-lg object-contain"
                             src="https://cdn-imgix.headout.com/media/images/c9db3cea62133b6a6bb70597326b4a34-388-dubai-img-worlds-of-adventure-tickets-01.jpg?auto=format&w=1222.3999999999999&h=687.6&q=90&fit=crop&ar=16%3A9&crop=faces"
                             alt=""
                         />
