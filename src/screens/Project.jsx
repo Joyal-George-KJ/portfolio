@@ -14,6 +14,7 @@ function Project() {
                         <a
                             href=""
                             className="laptop:w-8 mobile:w-6 aspect-square"
+                            aria-label="GitHub Logo"
                         >
                             <i className="mobile:text-sm laptop:text-2xl text-neutral-100 bi bi-github"></i>
                         </a>

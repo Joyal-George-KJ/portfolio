@@ -25,6 +25,7 @@ function ButtonContact({ url, displayName, hoverName }) {
         <a
             href={url}
             target="_blank"
+            aria-label={displayName}
             className="rounded-full flex justify-center mobile:w-6 items-center laptop:w-8 mobile:aspect-square relative z-5"
         >
             <i className={"mobile:text-sm laptop:text-2xl text-neutral-100 bi bi-" + getImg(displayName)}></i>
