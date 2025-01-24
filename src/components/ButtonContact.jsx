@@ -1,27 +1,21 @@
 import React, { useState } from "react";
-import InstagramLogo from "../assets/img/instagram.png";
-import LinkedInLogo from "../assets/img/linkedin.png";
-import TwitterLogo from "../assets/img/twitter.png";
-import GitHubLogo from "../assets/img/github.png";
-import WhatsappLogo from "../assets/img/whatsapp.png";
-import EmailLogo from "../assets/img/email.png";
 
 function ButtonContact({ url, displayName, hoverName }) {
     const [isHovered, setIsHovered] = useState("");
     function getImg(displayName) {
         switch (displayName) {
             case "Instagram":
-                return InstagramLogo;
+                return "instagram";
             case "LinkedIn":
-                return LinkedInLogo;
+                return 'linkedin';
             case "Twitter":
-                return TwitterLogo;
+                return 'twitter-x';
             case "GitHub":
-                return GitHubLogo;
+                return 'github';
             case "Whatsapp":
-                return WhatsappLogo;
+                return 'whatsapp';
             case "Email":
-                return EmailLogo;
+                return "envelope";
             default:
                 break;
         }
@@ -31,15 +25,9 @@ function ButtonContact({ url, displayName, hoverName }) {
         <a
             href={url}
             target="_blank"
-            className="rounded-full flex justify-center mobile:w-6 laptop:w-8 mobile:aspect-square border shadow-neutral-100 shadow-md relative bg-neutral-300 z-5"
+            className="rounded-full flex justify-center mobile:w-6 items-center laptop:w-8 mobile:aspect-square relative z-5"
         >
-            <img
-                className="object-cover rounded-full"
-                onMouseEnter={(e) => setIsHovered(e.target.alt)}
-                onMouseLeave={() => setIsHovered("")}
-                src={getImg(displayName)}
-                alt={displayName + " Logo"}
-            />
+            <i className={"mobile:text-sm laptop:text-2xl text-neutral-100 bi bi-" + getImg(displayName)}></i>
             {isHovered?.indexOf(displayName) !== -1 && (
                 <span
                     onMouseEnter={() => setIsHovered(displayName)}
