@@ -1,3 +1,4 @@
+import { CircularProgress } from "@mui/material";
 import React, { lazy, Suspense } from "react";
 import { HashRouter, Route, Routes } from "react-router-dom";
 const Home = lazy(() => import("./screens/Home"));
@@ -7,6 +8,14 @@ const Project = lazy(() => import("./screens/Project"));
 const About = lazy(() => import("./screens/About"));
 
 function App() {
+    function Loading () {
+        return (
+            <div className="w-full h-screen flex justify-center items-center">
+                <CircularProgress />
+            </div>
+        )
+    }
+
     return (
         <HashRouter>
             <Routes>
@@ -14,7 +23,7 @@ function App() {
                     <Route
                         index
                         element={
-                            <Suspense fallback={<span>Loading...</span>}>
+                            <Suspense fallback={<Loading />}>
                                 <Home />
                             </Suspense>
                         }
@@ -22,7 +31,7 @@ function App() {
                     <Route
                         path="/blog"
                         element={
-                            <Suspense fallback={<span>Loading...</span>}>
+                            <Suspense fallback={<Loading />}>
                                 <Blog />
                             </Suspense>
                         }
@@ -30,7 +39,7 @@ function App() {
                     <Route
                         path="/project"
                         element={
-                            <Suspense fallback={<span>Loading...</span>}>
+                            <Suspense fallback={<Loading />}>
                                 <Project />
                             </Suspense>
                         }
@@ -38,7 +47,7 @@ function App() {
                     <Route
                         path="/about"
                         element={
-                            <Suspense fallback={<span>Loading...</span>}>
+                            <Suspense fallback={<Loading />}>
                                 <About />
                             </Suspense>
                         }

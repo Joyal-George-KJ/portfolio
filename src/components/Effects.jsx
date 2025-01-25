@@ -70,9 +70,19 @@ function Effects(props) {
         const canvas = ref.current;
         const context = canvas.getContext("2d");
 
-        // Set canvas dimensions
-        canvas.width = window.innerWidth;
-        canvas.height = window.innerHeight;
+        const resizeCanvas = () => {
+            canvas.width = window.innerWidth;
+            canvas.height = window.innerHeight;
+    
+            // Reinitialize stars after resize
+            stars.current = initializeStars(100, canvas.width, canvas.height);
+        };
+    
+        // Set initial canvas size
+        resizeCanvas();
+    
+        // Add resize event listener
+        window.addEventListener("resize", resizeCanvas);
 
         // Initialize stars
         stars.current = initializeStars(100, canvas.width, canvas.height);
