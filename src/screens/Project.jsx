@@ -8,7 +8,7 @@ function Project() {
             <div className="project-container">
                 <div className="project-card shadow-sm shadow-neutral-300 p-4 rounded-lg backdrop-blur">
                     <div className="flex justify-between items-center">
-                        <h3 className="laptop:text-xl mobile:text-base text-neutral-300">
+                        <h3 className="laptop:text-xl font-mono mobile:text-base text-neutral-300 uppercase">
                             01 | Test Project
                         </h3>
                         <a
@@ -26,28 +26,30 @@ function Project() {
                             alt=""
                         />
                         <div className="mobile:w-full laptop:w-2/5 flex gap-4 flex-col">
-                            <p className="mobile:text-lg laptop:text-xl">
-                                Description
+                            <p className="mobile:text-lg laptop:text-4xl text-neutral-300 font-mono capitalize pt-4">
+                                Name of the Project
                             </p>
-                            <p className="w-full mobile:text-sm laptop:text-lg">
+                            <p className="w-full mobile:text-sm laptop:text-lg font-mono text-neutral-300 line-clamp-3">
                                 Lorem ipsum dolor sit amet, consectetur
                                 adipiscing elit. Nullam suscipit, eros vitae
                                 tincidunt tincidunt, nunc libero ultricies
+                                tincidunt tincidunt, nunc libero ultricies
                             </p>
-                            <div className="laptop:text-5xl mobile:text-xl flex gap-4 w-full flex-wrap">
-                                <i className="devicon-html5-plain-wordmark colored w-max aspect-square border shadow hover:shadow-neutral-200 p-4 rounded-lg border-neutral-400"></i>
-                                <i className="devicon-css3-plain-wordmark colored w-max aspect-square border shadow hover:shadow-neutral-200 p-4 rounded-lg border-neutral-400"></i>
-                                <i className="devicon-git-plain-wordmark colored w-max aspect-square border shadow hover:shadow-neutral-200 p-4 rounded-lg border-neutral-400"></i>
-                                <i className="devicon-react-original-wordmark colored w-max aspect-square border shadow hover:shadow-neutral-200 p-4 rounded-lg border-neutral-400"></i>
-                                <i className="devicon-javascript-plain colored w-max aspect-square border shadow hover:shadow-neutral-200 p-4 rounded-lg border-neutral-400"></i>
-                                <i className="devicon-tailwindcss-original colored w-max aspect-square border shadow hover:shadow-neutral-200 p-4 rounded-lg border-neutral-400"></i>
-                                <i className="devicon-redux-original colored w-max aspect-square border shadow hover:shadow-neutral-200 p-4 rounded-lg border-neutral-400"></i>
+                            <div className="laptop:text-3xl mobile:text-xl flex gap-4 w-full flex-wrap">
+                                <i className="devicon-html5-plain-wordmark colored hover:shadow-lg shadow-none cursor-pointer shadow-neutral-300"></i>
+                                <i className="devicon-css3-plain-wordmark colored hover:shadow-lg shadow-none cursor-pointer shadow-neutral-300"></i>
+                                <i className="devicon-javascript-plain colored hover:shadow-lg shadow-none cursor-pointer shadow-neutral-300"></i>
+                                <i className="devicon-react-original-wordmark colored hover:shadow-lg shadow-none cursor-pointer shadow-neutral-300"></i>
+                                <i className="devicon-git-plain-wordmark colored hover:shadow-lg shadow-none cursor-pointer shadow-neutral-300"></i>
+                                <i className="devicon-tailwindcss-original colored hover:shadow-lg shadow-none cursor-pointer shadow-neutral-300"></i>
+                                <i className="devicon-redux-original colored hover:shadow-lg shadow-none cursor-pointer shadow-neutral-300"></i>
                             </div>
                             <a
                                 href="www.joyalgeorgekj.com"
-                                className="px-4 py-1 rounded-lg text-green-500 border border-green-500 w-fit"
+                                className="text-neutral-400 text-lg w-fit"
                             >
                                 Live Link
+                                <i class="bi bi-arrow-right pl-2"></i>
                             </a>
                         </div>
                     </div>

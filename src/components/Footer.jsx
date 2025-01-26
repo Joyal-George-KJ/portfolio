@@ -2,7 +2,7 @@ import React from "react";
 
 function Footer() {
     return (
-            <div className="laptop:px-24 mobile:px-8 bg-neutral-800 py-4 shadow shadow-white flex flex-col backdrop-blur">
+            <div className="laptop:px-24 laptop:py-12 font-mono mobile:px-8 bg-neutral-800 py-4 shadow shadow-white flex flex-col backdrop-blur">
                 <p className="font-medium text-neutral-100 mobile:text-base laptop:text-xl pb-4 mobile:pb-2">Contact Me</p>
                 <a
                     className="text-neutral-300 mobile:text-sm laptop:text-xl"

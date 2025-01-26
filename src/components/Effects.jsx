@@ -28,7 +28,9 @@ function Effects(props) {
         });
 
         // Randomly pick 2-5 stars to shoot
-        const shootingStars = stars.current.sort(() => 0.5 - Math.random()).slice(0, Math.floor(Math.random() * 4) + 2);
+        const shootingStars = stars.current
+            .sort(() => 0.5 - Math.random())
+            .slice(0, Math.floor(Math.random() * 4) + 2);
         shootingStars.forEach((star) => {
             star.isShooting = true;
             star.dx = Math.random() * 2 + 2; // Random horizontal speed
@@ -42,28 +44,39 @@ function Effects(props) {
         stars.current.forEach((star) => {
             if (star.isShooting) {
                 // Update position for shooting stars
-                star.x += (star.dx - 2);
-                star.y += (star.dy - 2);
+                star.x += star.dx - 2;
+                star.y += star.dy - 2;
 
                 // Reset shooting star if it goes off-screen
-                if (star.x > canvasWidth || star.y > canvasHeight || star.y < 0) {
+                if (
+                    star.x > canvasWidth ||
+                    star.y > canvasHeight ||
+                    star.y < 0
+                ) {
                     star.x = Math.random() * canvasWidth;
                     star.y = Math.random() * canvasHeight;
                     star.isShooting = false;
                 }
             }
 
-            star.radius = Math.random() * 2 > star.radius ? star.radius + 0.1 : star.radius - 0.1; // Randomly shrink stars
+            star.radius =
+                Math.random() * 2 > star.radius
+                    ? star.radius + 0.1
+                    : star.radius - 0.1; // Randomly shrink stars
 
             // Draw the star
             context.beginPath();
-            context.fillStyle = star.isShooting ? "rgba(255, 255, 255, 1)" : "white"; // Bright for shooting stars
+            context.fillStyle = star.isShooting
+                ? "rgba(255, 255, 255, 1)"
+                : "white"; // Bright for shooting stars
             context.arc(star.x, star.y, star.radius, 0, 2 * Math.PI);
             context.fill();
         });
 
         // Request the next animation frame
-        requestAnimationFrame(() => animate(context, canvasWidth, canvasHeight));
+        requestAnimationFrame(() =>
+            animate(context, canvasWidth, canvasHeight)
+        );
     };
 
     useEffect(() => {
@@ -73,14 +86,14 @@ function Effects(props) {
         const resizeCanvas = () => {
             canvas.width = window.innerWidth;
             canvas.height = window.innerHeight;
-    
+
             // Reinitialize stars after resize
             stars.current = initializeStars(100, canvas.width, canvas.height);
         };
-    
+
         // Set initial canvas size
         resizeCanvas();
-    
+
         // Add resize event listener
         window.addEventListener("resize", resizeCanvas);
 
@@ -105,7 +118,13 @@ function Effects(props) {
         };
     }, []);
 
-    return <canvas className="fixed top-0 bottom-0 right-0 left-0 bg-neutral-800 -z-30" ref={ref} {...props}></canvas>;
+    return (
+        <canvas
+            className="fixed top-0 bottom-0 right-0 left-0 bg-neutral-800 -z-30"
+            ref={ref}
+            {...props}
+        ></canvas>
+    );
 }
 
 export default Effects;
