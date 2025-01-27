@@ -1,3 +1,4 @@
+import { Button } from "@mui/material";
 import React from "react";
 function Project() {
     return (
@@ -44,13 +45,14 @@ function Project() {
                                 <i className="devicon-tailwindcss-original colored hover:shadow-lg shadow-none cursor-pointer shadow-neutral-300"></i>
                                 <i className="devicon-redux-original colored hover:shadow-lg shadow-none cursor-pointer shadow-neutral-300"></i>
                             </div>
-                            <a
-                                href="www.joyalgeorgekj.com"
-                                className="text-neutral-400 text-lg w-fit"
-                            >
-                                Live Link
-                                <i class="bi bi-arrow-right pl-2"></i>
-                            </a>
+                            <div className="flex gap-4 pt-4 w-full">
+                                <Button variant="outlined" color="white" className="mobile:w-1/2 laptop:w-fit">
+                                    View Code
+                                </Button>
+                                <Button variant="contained" color="white" className="mobile:w-1/2 laptop:w-fit">
+                                    View Site
+                                </Button>
+                            </div>
                         </div>
                     </div>
                 </div>
