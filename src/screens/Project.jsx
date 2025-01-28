@@ -37,13 +37,13 @@ function Project() {
                                 tincidunt tincidunt, nunc libero ultricies
                             </p>
                             <div className="laptop:text-3xl mobile:text-xl flex gap-4 w-full flex-wrap">
-                                <i className="devicon-html5-plain-wordmark colored hover:shadow-lg shadow-none cursor-pointer shadow-neutral-300"></i>
-                                <i className="devicon-css3-plain-wordmark colored hover:shadow-lg shadow-none cursor-pointer shadow-neutral-300"></i>
-                                <i className="devicon-javascript-plain colored hover:shadow-lg shadow-none cursor-pointer shadow-neutral-300"></i>
-                                <i className="devicon-react-original-wordmark colored hover:shadow-lg shadow-none cursor-pointer shadow-neutral-300"></i>
-                                <i className="devicon-git-plain-wordmark colored hover:shadow-lg shadow-none cursor-pointer shadow-neutral-300"></i>
-                                <i className="devicon-tailwindcss-original colored hover:shadow-lg shadow-none cursor-pointer shadow-neutral-300"></i>
-                                <i className="devicon-redux-original colored hover:shadow-lg shadow-none cursor-pointer shadow-neutral-300"></i>
+                                <i className="devicon-html5-plain-wordmark colored icon-project"></i>
+                                <i className="devicon-css3-plain-wordmark colored icon-project"></i>
+                                <i className="devicon-javascript-plain colored icon-project"></i>
+                                <i className="devicon-react-original-wordmark colored icon-project"></i>
+                                <i className="devicon-git-plain-wordmark colored icon-project"></i>
+                                <i className="devicon-tailwindcss-original colored icon-project"></i>
+                                <i className="devicon-redux-original colored icon-project"></i>
                             </div>
                             <div className="flex gap-4 pt-4 w-full">
                                 <Button variant="outlined" color="white" className="mobile:w-1/2 laptop:w-fit">
