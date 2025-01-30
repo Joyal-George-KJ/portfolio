@@ -1,58 +1,49 @@
 import { Button } from "@mui/material";
 import React from "react";
+
 function Project() {
     return (
-        <div className="text-neutral-200 mobile:px-8 laptop:px-24 py-6">
-            <h2 className="mobile:text-lg mobile:py-4 laptop:text-2xl laptop:pb-8 font-bold">
-                Projects
-            </h2>
-            <div className="project-container">
-                <div className="project-card shadow-sm shadow-neutral-300 p-4 rounded-lg backdrop-blur">
-                    <div className="flex justify-between items-center">
-                        <h3 className="laptop:text-xl font-mono mobile:text-base text-neutral-300 uppercase">
-                            01 | Test Project
-                        </h3>
-                        <a
-                            href=""
-                            className="laptop:w-8 mobile:w-6 aspect-square"
-                            aria-label="GitHub Logo"
-                        >
-                            <i className="mobile:text-sm laptop:text-2xl text-neutral-100 bi bi-github"></i>
-                        </a>
-                    </div>
-                    <div className="flex mobile:flex-col laptop:flex-row gap-4 pt-4">
-                        <img
-                            className="mobile:w-full min-h-[100%] laptop:w-2/4 rounded-lg object-fill"
-                            src="https://cdn-imgix.headout.com/media/images/c9db3cea62133b6a6bb70597326b4a34-388-dubai-img-worlds-of-adventure-tickets-01.jpg?auto=format&w=1222.3999999999999&h=687.6&q=90&fit=crop&ar=16%3A9&crop=faces"
-                            alt=""
-                        />
-                        <div className="mobile:w-full laptop:w-2/5 flex gap-4 flex-col">
-                            <p className="mobile:text-lg laptop:text-4xl text-neutral-300 font-mono capitalize pt-4">
-                                Name of the Project
-                            </p>
-                            <p className="w-full mobile:text-sm laptop:text-lg font-mono text-neutral-300 line-clamp-3">
-                                Lorem ipsum dolor sit amet, consectetur
-                                adipiscing elit. Nullam suscipit, eros vitae
-                                tincidunt tincidunt, nunc libero ultricies
-                                tincidunt tincidunt, nunc libero ultricies
-                            </p>
-                            <div className="laptop:text-3xl mobile:text-xl flex gap-4 w-full flex-wrap">
-                                <i className="devicon-html5-plain-wordmark colored icon-project"></i>
-                                <i className="devicon-css3-plain-wordmark colored icon-project"></i>
-                                <i className="devicon-javascript-plain colored icon-project"></i>
-                                <i className="devicon-react-original-wordmark colored icon-project"></i>
-                                <i className="devicon-git-plain-wordmark colored icon-project"></i>
-                                <i className="devicon-tailwindcss-original colored icon-project"></i>
-                                <i className="devicon-redux-original colored icon-project"></i>
-                            </div>
-                            <div className="flex gap-4 pt-4 w-full">
-                                <Button variant="outlined" color="white" className="mobile:w-1/2 laptop:w-fit">
-                                    View Code
-                                </Button>
-                                <Button variant="contained" color="white" className="mobile:w-1/2 laptop:w-fit">
-                                    View Site
-                                </Button>
-                            </div>
+        <div className="text-neutral-200 px-6 lg:px-24 py-8">
+            <h2 className="text-2xl font-bold text-blue-400 border-b-2 border-blue-500 pb-2">Projects</h2>
+            
+            <div className="mt-6 bg-gray-800 p-6 rounded-2xl shadow-lg transition-transform transform hover:scale-[1.02]">
+                <div className="flex justify-between items-center">
+                    <h3 className="text-lg lg:text-xl font-mono uppercase text-gray-300">01 | Test Project</h3>
+                    <a href="" className="text-2xl text-gray-300 hover:text-blue-400 transition" aria-label="GitHub">
+                        <i className="bi bi-github"></i>
+                    </a>
+                </div>
+
+                <div className="flex flex-col lg:flex-row gap-6 mt-4">
+                    <img
+                        className="w-full lg:w-2/4 rounded-lg object-cover shadow-md"
+                        src="https://cdn-imgix.headout.com/media/images/c9db3cea62133b6a6bb70597326b4a34-388-dubai-img-worlds-of-adventure-tickets-01.jpg?auto=format&w=1222.3999999999999&h=687.6&q=90&fit=crop&ar=16%3A9&crop=faces"
+                        alt="Project Image"
+                    />
+
+                    <div className="w-full lg:w-2/5 flex flex-col gap-4">
+                        <p className="text-2xl font-mono text-blue-400 capitalize">Name of the Project</p>
+                        <p className="text-gray-300 text-sm lg:text-base line-clamp-3">
+                            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam suscipit, eros vitae tincidunt tincidunt.
+                        </p>
+
+                        <div className="text-3xl flex gap-4 flex-wrap text-gray-400">
+                            <i className="devicon-html5-plain-wordmark colored"></i>
+                            <i className="devicon-css3-plain-wordmark colored"></i>
+                            <i className="devicon-javascript-plain colored"></i>
+                            <i className="devicon-react-original-wordmark colored"></i>
+                            <i className="devicon-git-plain-wordmark colored"></i>
+                            <i className="devicon-tailwindcss-original colored"></i>
+                            <i className="devicon-redux-original colored"></i>
+                        </div>
+
+                        <div className="flex gap-4 pt-4">
+                            <Button variant="outlined" className="text-white border-gray-500 hover:border-blue-400">
+                                View Code
+                            </Button>
+                            <Button variant="contained" className="bg-blue-500 hover:bg-blue-600">
+                                View Site
+                            </Button>
                         </div>
                     </div>
                 </div>

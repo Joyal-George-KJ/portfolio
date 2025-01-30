@@ -11,6 +11,10 @@
     .icon-project {
         @apply hover:shadow-lg shadow-none cursor-pointer shadow-neutral-300;
     }
+
+    .skill-icon {
+        @apply outline p-2 rounded bg-neutral-50 border border-neutral-300;
+    }
 }
 
 .tags::before {
