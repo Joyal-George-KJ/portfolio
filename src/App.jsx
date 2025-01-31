@@ -8,14 +8,13 @@ const Project = lazy(() => import("./screens/Project"));
 const About = lazy(() => import("./screens/About"));
 
 function App() {
-    function Loading () {
+    function Loading() {
         return (
             <div className="w-full h-screen flex justify-center items-center">
                 <CircularProgress />
             </div>
-        )
+        );
     }
-
     return (
         <HashRouter>
             <Routes>
