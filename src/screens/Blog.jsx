@@ -8,7 +8,8 @@ function Blog() {
             <h1 class="text-3xl font-bold text-blue-400 border-b-2 border-blue-500 pb-2">
                         Blog
                     </h1>
-            <div className="blog-container mt-4 text-neutral-200 font-mono grid mobile:grid-cols-1 tablet:grid-cols-3 laptop:grid-cols-4 gap-6">
+            <div className="blog-container mt-4 text-neutral-200 font-mono grid mobile:grid-cols-1 tablet:grid-cols-2 laptop:grid-cols-3 gap-6">
+                <BlogCard blogImage={blogImage} />
                 <BlogCard blogImage={blogImage} />
                 <BlogCard blogImage={blogImage} />
             </div>

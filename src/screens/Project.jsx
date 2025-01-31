@@ -4,7 +4,7 @@ import React from "react";
 function Project() {
     return (
         <div className="text-neutral-200 px-6 lg:px-24 py-8">
-            <h2 className="text-2xl font-bold text-blue-400 border-b-2 border-blue-500 pb-2">Projects</h2>
+            <h2 className="text-2xl font-bold text-blue-200 border-b-2 border-blue-500 pb-2">Projects</h2>
             
             <div className="mt-6 bg-gray-800 p-6 rounded-2xl shadow-lg transition-transform transform hover:scale-[1.02]">
                 <div className="flex justify-between items-center">
