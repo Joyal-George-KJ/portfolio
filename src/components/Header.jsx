@@ -1,54 +1,120 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
 
 function Header() {
     const [toggle, setToggle] = useState(false);
-    const [width, setWidth] = useState(window.innerWidth);
+    const [isDarkMode, setIsDarkMode] = useState(false);
+
+    useEffect(() => {
+        const darkModeMediaQuery = window.matchMedia(
+            "(prefers-color-scheme: dark)"
+        );
+        setIsDarkMode(darkModeMediaQuery.matches);
+
+        const listener = (e) => setIsDarkMode(e.matches);
+        darkModeMediaQuery.addEventListener("change", listener);
+
+        return () => darkModeMediaQuery.removeEventListener("change", listener);
+    }, []);
 
     return (
-        <div className="relative z-30">
-            <nav className="flex justify-between items-center py-4 px-8 font-mono bg-transparent backdrop-blur-md text-neutral-200 mobile:text-base tablet:text-xl pl-8">
+        <header className="relative z-30">
+            <nav
+                className={`flex justify-between items-center py-4 px-8 font-mono 
+                ${
+                    isDarkMode
+                        ? "bg-gray-800 text-gray-100"
+                        : "bg-gray-50 text-gray-900"
+                }
+                backdrop-blur-md mobile:text-base tablet:text-xl`}
+            >
+                {/* Logo / Home Link */}
                 <ul>
-                    <li className="cursor-pointer list-none h-7 grid place-items-center">
-                        <Link to="/" className="mobile:text-base tablet:text-xl">Joyal George K J</Link>
+                    <li className="cursor-pointer list-none h-7 grid place-items-center font-bold">
+                        <Link
+                            to="/"
+                            className="hover:text-purple-500 transition duration-300"
+                        >
+                            Joyal George K J
+                        </Link>
                     </li>
                 </ul>
 
-                <ul
-                    className={`flex ${
-                        !toggle
-                            ? "justify-center"
-                            : "flex-col absolute items-end right-0 p-4 pt-4 bg-neutral-800 py-12 top-0 h-screen mobile:w-3/4 laptop:w-full z-40"
-                    } gap-8 laptop:text-xl backdrop-blur-md text-neutral-200`}
-                >
-                    <li>
-                        <button
-                            onClick={() => setToggle(!toggle)}
-                            className={`${toggle && 'px-4'} cursor-pointer text-xl z-50`}
-                            aria-label="Toggle Menu"
+                {/* Desktop Navigation */}
+                {toggle ? (
+                    <div className="absolute top-0 right-0 h-screen w-3/4 bg-gray-800 text-gray-100 p-6 pt-16 flex flex-col gap-6 shadow-lg">
+                        
+                        <Link
+                            onClick={() => setToggle(false)}
+                            to="/blog"
+                            className="hover:text-purple-500 transition"
                         >
-                            <i className={`bi bi-${!toggle ? "list" : "x-lg"}`}></i>
+                            Blog
+                        </Link>
+                        <Link
+                            onClick={() => setToggle(false)}
+                            to="/project"
+                            className="hover:text-purple-500 transition"
+                        >
+                            Projects
+                        </Link>
+                        <Link
+                            onClick={() => setToggle(false)}
+                            to="/about"
+                            className="hover:text-purple-500 transition"
+                        >
+                            About
+                        </Link>
+                        <button className="bg-purple-600 text-white px-4 py-2 rounded-lg hover:bg-purple-700 transition">
+                            Login
                         </button>
-                    </li>
-                    {toggle && (
-                        <>
-                            <li className="cursor-pointer px-2 w-max">
-                                <Link onClick={() => setToggle(!toggle)} to="/blog">Blog</Link>
-                            </li>
-                            <li className="cursor-pointer px-2 w-max">
-                                <Link onClick={() => setToggle(!toggle)} to="/project">Project</Link>
-                            </li>
-                            <li className="cursor-pointer px-2 w-max">
-                                <Link onClick={() => setToggle(!toggle)} to="/about">About</Link>
-                            </li>
-                            <li className="cursor-pointer px-2 w-max">
-                                <button>Login</button>
-                            </li>
-                        </>
-                    )}
-                </ul>
+                    </div>
+                ) : (
+                    <ul className="hidden laptop:flex items-center justify-center gap-8 text-lg">
+                        <li className="cursor-pointer">
+                            <Link
+                                to="/blog"
+                                className="hover:text-purple-500 transition duration-300"
+                            >
+                                Blog
+                            </Link>
+                        </li>
+                        <li className="cursor-pointer">
+                            <Link
+                                to="/project"
+                                className="hover:text-purple-500 transition duration-300"
+                            >
+                                Projects
+                            </Link>
+                        </li>
+                        <li className="cursor-pointer">
+                            <Link
+                                to="/about"
+                                className="hover:text-purple-500 transition duration-300"
+                            >
+                                About
+                            </Link>
+                        </li>
+                        <li className="cursor-pointer">
+                            <button className="bg-purple-600 text-white px-4 py-2 rounded-lg hover:bg-purple-700 transition duration-300">
+                                Login
+                            </button>
+                        </li>
+                    </ul>
+                )}
+
+                {/* Mobile Menu Button */}
+                <button
+                    onClick={() => setToggle(!toggle)}
+                    className="laptop:hidden text-2xl z-50 focus:outline-none"
+                    aria-label="Toggle Menu"
+                >
+                    <i className={`bi bi-${!toggle ? "list" : "x-lg"}`}></i>
+                </button>
+
+                {/* Mobile Menu */}
             </nav>
-        </div>
+        </header>
     );
 }
 
