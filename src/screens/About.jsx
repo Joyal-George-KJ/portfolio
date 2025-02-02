@@ -50,7 +50,7 @@ function About() {
                 </div>
 
                 <div className="mt-8">
-                    <h3 className="text-2xl font-semibold text-blue-600 dark:text-blue-400 text-blue-600">Mission</h3>
+                    <h3 className="text-2xl font-semibold dark:text-blue-400 text-blue-600">Mission</h3>
                     <p className="dark:text-gray-300 text-gray-800 mt-4 leading-relaxed">
                         My ultimate aspiration is to <span className="font-semibold">build a company</span> that 
                         <span className="dark:text-green-400 text-green-600 font-bold">{" "}prioritizes people over profit</span>, contributing to the 
