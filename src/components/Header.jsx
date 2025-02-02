@@ -44,7 +44,6 @@ function Header() {
                 {/* Desktop Navigation */}
                 {toggle ? (
                     <div className="absolute top-0 right-0 h-screen w-3/4 bg-gray-800 text-gray-100 p-6 pt-16 flex flex-col gap-6 shadow-lg">
-                        
                         <Link
                             onClick={() => setToggle(false)}
                             to="/blog"
@@ -69,6 +68,7 @@ function Header() {
                         <button className="bg-purple-600 text-white px-4 py-2 rounded-lg hover:bg-purple-700 transition">
                             Login
                         </button>
+                        <ThemeToggle />
                     </div>
                 ) : (
                     <ul className="hidden laptop:flex items-center justify-center gap-8 text-lg">

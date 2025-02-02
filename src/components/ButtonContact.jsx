@@ -30,10 +30,10 @@ function ButtonContact({ url, displayName, hoverName }) {
             onMouseEnter={() => setIsHovered(displayName)}
             onMouseLeave={() => setIsHovered("")}
         >
-            <i className={"mobile:text-sm laptop:text-2xl text-neutral-100 bi bi-" + getImg(displayName)}></i>
+            <i className={"mobile:text-sm laptop:text-2xl text-neutral-900 dark:text-neutral-100 bi bi-" + getImg(displayName)}></i>
             {isHovered?.indexOf(displayName) !== -1 && (
                 <span
-                    className="absolute rounded -left-3/5 top-12 px-2 py-1 w-max bg-neutral-200 text-neutral-900 font-bold text-sm z-10"
+                    className="absolute rounded -left-3/5 top-12 px-2 py-1 w-max bg-neutral-800 text-neutral-200 dark:bg-neutral-200 dark:text-neutral-800 font-bold text-sm z-10"
                 >
                     {hoverName}
                 </span>

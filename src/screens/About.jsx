@@ -2,102 +2,61 @@ import React from "react";
 
 function About() {
     return (
-        <div className="text-neutral-200 font-mono text-lg py-4 min-h-[100vh] mobile:px-6 laptop:px-24">
-            <div className=" backdrop-blur">
-                <div>
-                    <h1 class="text-3xl font-bold text-blue-400 border-b-2 border-blue-500 pb-2">
-                        About
-                    </h1>
+        <div className="font-mono text-lg py-8 min-h-screen mobile:px-6 laptop:px-24">
+            <div className="relative z-10 p-6 rounded-lg bg-opacity-20">
+                <h1 className="text-4xl font-bold dark:text-blue-400 text-blue-600 border-b-4 dark:border-blue-500 pb-3">About Me</h1>
 
-                    <div class="mt-4">
-                        <h2 class="text-2xl font-semibold text-gray-100">
-                            Joyal George K J 🚀
-                        </h2>
-                        <p class="text-gray-300 text-lg font-medium">
-                            React.js Developer | Problem Solver | Future
-                            Entrepreneur
-                        </p>
-                    </div>
-
-                    <p class="mt-4 text-gray-200">
-                        I’m a self-driven{" "}
-                        <span class="text-blue-400 font-semibold">
-                            React.js developer
-                        </span>{" "}
-                        passionate about building performant and scalable web
-                        applications. My journey into development was
-                        unconventional—I took on my first project without even
-                        knowing the language, learning as I built a
-                        <span class="text-blue-400 font-semibold">
-                            {" "}
-                            bachelor’s project for a friend
-                        </span>
-                        . Since then, I’ve completed numerous
-                        <span class="text-blue-400 font-semibold">
-                            {" "}
-                            frontend challenges
-                        </span>{" "}
-                        on platforms like
-                        <span class="text-blue-400">
-                            {" "}
-                            Frontend Mentor
-                        </span> and <span class="text-blue-400">iCodeThis</span>
-                        , and honed my problem-solving skills through{" "}
-                        <span class="text-blue-400">HackerRank</span> and{" "}
-                        <span class="text-blue-400">CodeWars</span>.
+                <div className="mt-6">
+                    <h2 className="text-3xl font-semibold text-black dark:text-white">Joyal George K J 🚀</h2>
+                    <p className="dark:text-gray-400 text-gray-600 text-lg font-medium">
+                        React.js Developer | Problem Solver | Aspiring Entrepreneur
                     </p>
+                </div>
 
-                    <p class="mt-4 text-neutral-200">
-                        Even when faced with challenges—like working part-time
-                        as a <span class="text-blue-400">fuel attendant</span>{" "}
-                        after my laptop broke—I never let go of my goal to
-                        become a <span class="text-blue-400">developer</span>. I
-                        also participated in an
-                        <span class="text-blue-400">
-                            inter-university web development competition
-                        </span>
-                        , where I secured{" "}
-                        <span class="font-bold text-green-400">1st place</span>.
+                <p className="mt-6 dark:text-gray-300 text-gray-800 leading-relaxed">
+                    I am a passionate <span className="dark:text-blue-400 text-blue-600 font-semibold">React.js developer</span> dedicated to building 
+                    high-performance and scalable web applications. My journey into development was unconventional—I took on my first project 
+                    with minimal experience, learning as I built a <span className="font-semibold">bachelor’s project</span> for a friend.
+                </p>
+
+                <p className="mt-4 dark:text-gray-300 text-gray-800 leading-relaxed">
+                    Since then, I have tackled various <span className="font-semibold">frontend challenges</span> on platforms such as 
+                    <span className="dark:text-blue-400 text-blue-600">{" "}Frontend Mentor</span> and <span className="dark:text-blue-400 text-blue-600">iCodeThis</span>, honing my problem-solving 
+                    skills through <span className="dark:text-blue-400 text-blue-600">HackerRank</span> and <span className="dark:text-blue-400 text-blue-600">CodeWars</span>.
+                </p>
+
+                <p className="mt-4 dark:text-gray-300 text-gray-800 leading-relaxed">
+                    Despite challenges—including working part-time as a <span className="font-semibold">fuel attendant</span> after my laptop broke—I remained 
+                    committed to my goal of becoming a <span className="font-semibold">developer</span>. I also secured 
+                    <span className="dark:text-green-400  text-green-600 font-bold">{" "}1st place</span> in an <span className="font-semibold">inter-university web development competition</span>.
+                </p>
+
+                <div className="mt-8">
+                    <h3 className="text-2xl font-semibold text-blue-600 dark:text-blue-400">Skills</h3>
+                    <div className="text-4xl flex gap-6 flex-wrap justify-center p-6 rounded-lg shadow-lg dark:bg-gray-700 bg-gray-500 bg-opacity-20">
+                        <i className="devicon-html5-plain-wordmark colored"></i>
+                        <i className="devicon-css3-plain-wordmark colored"></i>
+                        <i className="devicon-javascript-plain colored"></i>
+                        <i className="devicon-react-original-wordmark colored"></i>
+                        <i className="devicon-redux-original colored"></i>
+                        <i className="devicon-nextjs-original-wordmark colored"></i>
+                        <i className="devicon-tailwindcss-original colored"></i>
+                        <i className="devicon-github-original-wordmark colored"></i>
+                        <i className="devicon-npm-original-wordmark colored"></i>
+                        <i className="devicon-postman-plain colored"></i>
+                        <i className="devicon-sass-original colored"></i>
+                        <i className="devicon-vscode-plain colored"></i>
+                    </div>
+                </div>
+
+                <div className="mt-8">
+                    <h3 className="text-2xl font-semibold text-blue-600 dark:text-blue-400 text-blue-600">Mission</h3>
+                    <p className="dark:text-gray-300 text-gray-800 mt-4 leading-relaxed">
+                        My ultimate aspiration is to <span className="font-semibold">build a company</span> that 
+                        <span className="dark:text-green-400 text-green-600 font-bold">{" "}prioritizes people over profit</span>, contributing to the 
+                        advancement of civilization into the <span className="dark:text-blue-400 text-blue-600 font-semibold">next era</span>. 
+                        I firmly believe technology should empower rather than exploit.
                     </p>
-
-                    <div class="mt-6">
-                        <h3 class="text-xl font-semibold text-blue-400">
-                            Skills
-                        </h3>
-                        <div className="text-4xl flex gap-4 flex-wrap justify-center p-4 rounded-lg shadow-neutral-200">
-                            <i className="devicon-html5-plain-wordmark colored skill-icon"></i>
-                            <i className="devicon-css3-plain-wordmark colored skill-icon"></i>
-                            <i className="devicon-javascript-plain colored skill-icon"></i>
-                            <i className="devicon-react-original-wordmark colored skill-icon"></i>
-                            <i className="devicon-redux-original colored skill-icon"></i>
-                            <i className="devicon-nextjs-original-wordmark colored skill-icon"></i>
-                            <i className="devicon-tailwindcss-original colored skill-icon"></i>
-                            <i className="devicon-github-original-wordmark colored skill-icon"></i>
-                            <i className="devicon-npm-original-wordmark colored skill-icon"></i>
-                            <i className="devicon-postman-plain colored skill-icon"></i>
-                            <i className="devicon-sass-original colored skill-icon"></i>
-                            <i className="devicon-vscode-plain colored skill-icon"></i>
-                        </div>
-                    </div>
-
-                    <div class="mt-6">
-                        <h3 class="text-xl font-semibold text-blue-400">
-                            Mission
-                        </h3>
-                        <p class="text-neutral-200 mt-2">
-                            My ultimate goal is to{" "}
-                            <span class="text-blue-400 font-semibold">
-                                build a company
-                            </span>{" "}
-                            that{" "}
-                            <span class="font-bold text-green-400">
-                                prioritizes people over profit
-                            </span>{" "}
-                            and contributes to advancing civilization into the
-                            <span class="text-blue-400">{" "}next stage</span>. I
-                            believe technology should empower, not exploit.
-                        </p>
-                    </div>
                 </div>
             </div>
         </div>
