@@ -3,7 +3,7 @@ import React from "react";
 
 function Project() {
     return (
-        <div className="font-mono text-lg py-8 min-h-screen mobile:px-6 laptop:px-24">
+        <div className="font-mono text-lg py-8 min-h-fit mobile:px-6 laptop:px-24">
             <div className="relative z-10 p-6 rounded-lg bg-opacity-20">
                 <h1 className="text-4xl font-bold dark:text-blue-400 text-blue-600 border-b-4 dark:border-blue-500 pb-3">
                     Project
