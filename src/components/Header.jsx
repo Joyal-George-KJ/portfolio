@@ -1,10 +1,13 @@
 import React, { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
 import ThemeToggle from "./ThemeToggle";
+import { useSelector } from "react-redux";
 
 function Header() {
     const [toggle, setToggle] = useState(false);
     const [isDarkMode, setIsDarkMode] = useState(false);
+    
+    const {name} = useSelector((state) => state.data);
 
     useEffect(() => {
         const darkModeMediaQuery = window.matchMedia(
@@ -19,7 +22,7 @@ function Header() {
     }, []);
 
     return (
-        <header className="relative z-30">
+        <header className="sticky top-0 z-30">
             <nav
                 className={`flex justify-between items-center py-4 px-8 font-mono 
                 ${
@@ -36,7 +39,7 @@ function Header() {
                             to="/"
                             className="hover:text-purple-500 transition duration-300"
                         >
-                            Joyal George K J
+                            {name}
                         </Link>
                     </li>
                 </ul>
