@@ -1,4 +1,5 @@
 import React from "react";
+import Socials from "./Socials";
 
 function Footer() {
   return (
@@ -22,20 +23,7 @@ function Footer() {
         </div>
 
         {/* Social Media Icons */}
-        <div className="flex justify-content-center mt-4 gap-4">
-          <a href="https://github.com/yourprofile" target="_blank" rel="noopener noreferrer" className="text-light fs-3">
-            <i className="bi bi-github"></i>
-          </a>
-          <a href="https://www.linkedin.com/in/yourprofile" target="_blank" rel="noopener noreferrer" className="text-light fs-3">
-            <i className="bi bi-linkedin"></i>
-          </a>
-          <a href="https://twitter.com/yourprofile" target="_blank" rel="noopener noreferrer" className="text-light fs-3">
-            <i className="bi bi-twitter-x"></i>
-          </a>
-          <a href="mailto:your-email@example.com" className="text-light fs-3">
-            <i className="bi bi-envelope-fill"></i>
-          </a>
-        </div>
+        {/* <Socials /> */}
       </div>
     </footer>
   );

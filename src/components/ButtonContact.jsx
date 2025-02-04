@@ -1,9 +1,9 @@
 import React, { useState } from "react";
 
-function ButtonContact({ url, displayName, hoverName }) {
+function ButtonContact({ name, handle, url }) {
     const [isHovered, setIsHovered] = useState("");
-    function getImg(displayName) {
-        switch (displayName) {
+    function getImg(name) {
+        switch (name) {
             case "Instagram":
                 return "instagram";
             case "LinkedIn":
@@ -12,7 +12,7 @@ function ButtonContact({ url, displayName, hoverName }) {
                 return 'twitter-x';
             case "GitHub":
                 return 'github';
-            case "Whatsapp":
+            case "WhatsApp":
                 return 'whatsapp';
             case "Email":
                 return "envelope";
@@ -25,17 +25,17 @@ function ButtonContact({ url, displayName, hoverName }) {
         <a
             href={url}
             target="_blank"
-            aria-label={displayName}
+            aria-label={name}
             className="rounded-full flex justify-center mobile:w-6 items-center laptop:w-8 mobile:aspect-square relative z-5"
-            onMouseEnter={() => setIsHovered(displayName)}
+            onMouseEnter={() => setIsHovered(name)}
             onMouseLeave={() => setIsHovered("")}
         >
-            <i className={"mobile:text-sm laptop:text-2xl text-neutral-900 dark:text-neutral-100 bi bi-" + getImg(displayName)}></i>
-            {isHovered?.indexOf(displayName) !== -1 && (
+            <i className={"mobile:text-sm laptop:text-2xl text-neutral-900 dark:text-neutral-100 bi bi-" + getImg(name)}></i>
+            {isHovered?.indexOf(name) !== -1 && (
                 <span
                     className="absolute rounded -left-3/5 top-12 px-2 py-1 w-max bg-neutral-800 text-neutral-200 dark:bg-neutral-200 dark:text-neutral-800 font-bold text-sm z-10"
                 >
-                    {hoverName}
+                    {handle}
                 </span>
             )}
         </a>
