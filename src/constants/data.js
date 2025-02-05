@@ -26,37 +26,31 @@ const data = {
             "year": "8th Grade",
             "title": "Tech Curiosity Begins",
             "event": "Explored tech using Termux for ethical hacking experiments.",
-            "iconClass": "bi bi-laptop"
         },
         {
             "year": "10th Grade",
             "title": "Introduction to Computers",
             "event": "Had computers as a subject but mostly learned how to operate them.",
-            "iconClass": "bi bi-pc-display"
         },
         {
             "year": "11th - 12th",
             "title": "First Steps in Programming",
-            "event": "Studied Computer Science and IT, first exposure to programming with Java and HTML.",
-            "iconClass": "bi bi-code-slash"
+            "event": "Studied Computer Science and IT, first exposure to programming with C++ and HTML.",
         },
         {
             "year": "BCA (Bachelor’s)",
             "title": "Software Development & Competitions",
             "event": "Developed Java, PHP, and Python-based projects. Won 1st prize at a tech fest.",
-            "iconClass": "bi bi-award"
         },
         {
             "year": "Self-learning Phase",
             "title": "Deep Dive into Frontend",
             "event": "Built frontend projects, solved coding challenges on HackerRank & CodeWars, and completed challenges on Frontend Mentor and iCodeThis.",
-            "iconClass": "bi bi-lightbulb"
         },
         {
             "year": "Current",
             "title": "Pursuing Developer Career",
             "event": "Working part-time as a fuel attendant while preparing for a full-time developer role.",
-            "iconClass": "bi bi-briefcase"
         }
     ],
     "projects": [
