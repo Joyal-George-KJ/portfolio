@@ -5,7 +5,6 @@ import { useSelector } from "react-redux";
 
 function Project() {
     const { projects } = useSelector((state) => state.data);
-    console.log(projects);
 
     return (
         <div className="font-mono text-lg py-8 min-h-fit mobile:px-6 laptop:px-24">
