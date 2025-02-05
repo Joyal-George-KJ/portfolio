@@ -1,4 +1,3 @@
-import { Button } from "@mui/material";
 import React from "react";
 import ProjectCard from "../components/ProjectCard";
 import { useSelector } from "react-redux";
@@ -12,7 +11,7 @@ function Project() {
                 <h1 className="text-4xl font-bold dark:text-blue-400 text-blue-600 border-b-4 border-blue-600 dark:border-blue-500 pb-3">
                     Project
                 </h1>
-                <div className="grid mobile:grid-cols-1 laptop:grid-cols-2 gap-4">
+                <div className="grid mobile:grid-cols-1 laptop:grid-cols-2 gap-4 mt-6">
                     {projects.map((val, ind) => (
                         <ProjectCard
                             index={ind + 1}
