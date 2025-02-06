@@ -59,7 +59,7 @@ function Header() {
                             to="/project"
                             className="hover:text-purple-500 transition"
                         >
-                            Projects
+                            Project
                         </Link>
                         <Link
                             onClick={() => setToggle(false)}
@@ -69,7 +69,7 @@ function Header() {
                             About
                         </Link>
                         <button className="bg-purple-600 text-white px-4 py-2 rounded-lg hover:bg-purple-700 transition">
-                            Login
+                            Resume
                         </button>
                         <ThemeToggle />
                     </div>
@@ -88,7 +88,7 @@ function Header() {
                                 to="/project"
                                 className="hover:text-purple-500 transition duration-300"
                             >
-                                Projects
+                                Project
                             </Link>
                         </li>
                         <li className="cursor-pointer">
@@ -101,7 +101,7 @@ function Header() {
                         </li>
                         <li className="cursor-pointer">
                             <button className="bg-purple-600 text-white px-4 py-2 rounded-lg hover:bg-purple-700 transition duration-300">
-                                Login
+                                Resume
                             </button>
                         </li>
                         <li className="cursor-pointer">
