@@ -1,6 +1,6 @@
 import { CircularProgress } from "@mui/material";
 import React, { lazy, Suspense } from "react";
-import { HashRouter, Route, Routes } from "react-router-dom";
+import { BrowserRouter, Route, Routes } from "react-router-dom";
 const Home = lazy(() => import("./screens/Home"));
 const Layout = lazy(() => import("./screens/Layout"));
 const Blog = lazy(() => import("./screens/Blog"));
@@ -16,7 +16,7 @@ function App() {
         );
     }
     return (
-        <HashRouter>
+        <BrowserRouter>
             <Routes>
                 <Route path="/" element={<Layout />}>
                     <Route
@@ -53,7 +53,7 @@ function App() {
                     />
                 </Route>
             </Routes>
-        </HashRouter>
+        </BrowserRouter>
     );
 }
 
