@@ -1,7 +1,7 @@
 // ThemeToggle.js
 import React, { useEffect } from "react";
 import { useDispatch, useSelector } from "react-redux";
-import { setTheme, toggleTheme } from "../utilities/global state/slice/ThemeSlice";
+import { setTheme, toggleTheme } from "../utilities/globalState/slice/ThemeSlice";
 
 const ThemeToggle = () => {
   const dispatch = useDispatch();
