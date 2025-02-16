@@ -1,5 +1,6 @@
 import { Button } from "@mui/material";
 import React from "react";
+import stacks from "../constants/stacks";
 
 function ProjectCard({
     index,
@@ -9,6 +10,7 @@ function ProjectCard({
     projectType,
     visitLink,
     codeLink,
+    techStack,
 }) {
     return (
         <div className="mt-6 h-fit dark:bg-gray-800 bg-gray-200 p-6 rounded-2xl shadow-lg transition-transform transform hover:scale-[1.02]">
@@ -34,17 +36,15 @@ function ProjectCard({
                     </p>
 
                     <div className="text-3xl flex gap-4 flex-wrap">
-                        <i className="devicon-html5-plain-wordmark colored"></i>
-                        <i className="devicon-css3-plain-wordmark colored"></i>
-                        <i className="devicon-javascript-plain colored"></i>
-                        <i className="devicon-react-original-wordmark colored"></i>
-                        <i className="devicon-git-plain-wordmark colored"></i>
-                        <i className="devicon-tailwindcss-original colored"></i>
-                        <i className="devicon-redux-original colored"></i>
+                        {
+                            techStack.map((tech) => (
+                                <i key={tech} className={`devicon-${stacks[tech]} colored`}></i>
+                            ))  
+                        }
                     </div>
 
                     <div className="flex w-full gap-4 pt-4">
-                        <a href={codeLink}>
+                        <a href={codeLink} target="_blank" rel="noreferrer">
                             <Button
                                 variant="outlined"
                                 className="dark:text-white text-black border-gray-600 dark:border-gray-500 hover:border-blue-400"
@@ -52,7 +52,7 @@ function ProjectCard({
                                 View Code
                             </Button>
                         </a>
-                        <a href={visitLink}>
+                        <a href={visitLink} target="_blank" rel="noreferrer">
                             <Button
                                 variant="contained"
                                 className="dark:bg-blue-500 hover:bg-blue-600"
