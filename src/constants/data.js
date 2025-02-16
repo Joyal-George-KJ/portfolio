@@ -58,14 +58,18 @@ const data = {
             "type": "Bachelor’s Project",
             "name": "CouponShare",
             "description": "Developed a project for a friend while learning the language.",
-            "techStack": ["PHP", "MySQL"]
+            "techStack": ["html", "css", "js", "php", "mysql"],
+            "visitLink": "",
+            "codeLink": "https://github.com/Joyal-George-KJ",
         },
         {
             "type": "Bachelor’s Project",
             "name": "Frontend Challenges",
             "description": "Completed multiple frontend challenges from Frontend Mentor and iCodeThis.",
-            "techStack": ["React js", "Tailwind CSS"]
-        }
+            "techStack": ["html", "css", "js","react", "tailwind"],
+            "visitLink": "https://www.frontendmentor.io/profile/Joyal-George-KJ",
+            "codeLink": "https://github.com/Joyal-George-KJ",
+        },
     ],
     "socials": [
         {
