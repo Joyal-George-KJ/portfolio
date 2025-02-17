@@ -24,13 +24,7 @@ function Header() {
     return (
         <header className="sticky top-0 z-30">
             <nav
-                className={`flex justify-between items-center py-4 px-8 font-mono 
-                ${
-                    isDarkMode
-                        ? "bg-gray-800 text-gray-100"
-                        : "bg-gray-50 text-gray-900"
-                }
-                backdrop-blur-md mobile:text-base tablet:text-xl`}
+                className={`flex justify-between items-center py-4 px-8 font-mono dark:bg-gray-800 dark:text-gray-100 bg-gray-50 text-gray-900 backdrop-blur-md mobile:text-base tablet:text-xl`}
             >
                 {/* Logo / Home Link */}
                 <ul>
