@@ -1,5 +1,6 @@
 import * as React from "react";
 import { useSelector } from "react-redux";
+import ExperienceCard from "../components/ExperienceCard";
 
 export default function ExperienceTimeline() {
     const { experience } = useSelector((state) => state.data);
@@ -16,22 +17,7 @@ export default function ExperienceTimeline() {
                             .slice()
                             .reverse()
                             .map((val, index) => (
-                                <li className="grid grid-cols-1 flex-wrap-reverse justify-items-center relative mt-2" key={index}>
-                                    <span
-                                        className={`bg-blue-600 w-2 h-14 rounded-full px-3 py-[6px] text-neutral-200`}
-                                    ></span>
-                                    <div className="w-full text-center pt-2">
-                                        <h4 className="dark:text-gray-300 text-gray-800">
-                                            {val.year}
-                                        </h4>
-                                        <h4 className="dark:text-neutral-100 font-bold text-neutral-900">
-                                            {val.title}
-                                        </h4>
-                                        <p className="dark:text-gray-300 text-gray-800">
-                                            {val.event}
-                                        </p>
-                                    </div>
-                                </li>
+                                <ExperienceCard title={val.title} year={val.year} event={val.event} key={index} />
                             ))}
                     </ul>
                 </div>
