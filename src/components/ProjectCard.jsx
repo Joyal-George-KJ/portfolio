@@ -1,6 +1,8 @@
+import React, { useEffect, useRef, useState } from "react";
 import { Button } from "@mui/material";
-import React from "react";
 import stacks from "../constants/stacks";
+import "../index.css";
+import useViewportCheck from "../hooks/useViewportCheck";
 
 function ProjectCard({
     index,
@@ -12,10 +14,18 @@ function ProjectCard({
     codeLink,
     techStack,
 }) {
+    const cardRef = useRef(null);
+    const isVisible = useViewportCheck(cardRef);
+
     return (
-        <div className="mt-6 h-fit dark:bg-gray-800 bg-gray-200 p-6 rounded-2xl shadow-lg transition-transform transform hover:scale-[1.02]">
+        <div
+            ref={cardRef}
+            className={`mt-6 h-fit fadeIn dark:bg-gray-800 bg-gray-200 p-6 rounded-2xl shadow-lg transition-transform transform hover:scale-[1.02] ${
+                isVisible ? "in-view" : ""
+            }`}
+        >
             <div className="flex justify-between items-center">
-                <h3 className=" font-mono uppercase text-gray-700 dark:text-gray-300">
+                <h3 className="font-mono uppercase text-gray-700 dark:text-gray-300">
                     {index} | {projectType}
                 </h3>
             </div>
@@ -36,11 +46,9 @@ function ProjectCard({
                     </p>
 
                     <div className="text-3xl flex gap-4 flex-wrap">
-                        {
-                            techStack.map((tech) => (
-                                <i key={tech} className={`devicon-${stacks[tech]} colored`}></i>
-                            ))  
-                        }
+                        {techStack.map((tech) => (
+                            <i key={tech} className={`devicon-${stacks[tech]} colored`}></i>
+                        ))}
                     </div>
 
                     <div className="flex w-full gap-4 pt-4">
