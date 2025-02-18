@@ -40,7 +40,7 @@ function Header() {
 
                 {/* Desktop Navigation */}
                 {toggle ? (
-                    <div className="absolute top-0 right-0 h-screen w-3/4 bg-gray-800 text-gray-100 p-6 pt-16 flex flex-col gap-6 shadow-lg">
+                    <div className="absolute top-0 right-0 h-screen w-3/4 bg-gray-200 dark:bg-gray-800 text-gray-900 dark:text-gray-100 p-6 pt-16 flex flex-col gap-6 shadow-lg">
                         <Link
                             onClick={() => setToggle(false)}
                             to="/blog"
