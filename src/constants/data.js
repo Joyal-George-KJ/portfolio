@@ -55,17 +55,19 @@ const data = {
     ],
     "projects": [
         {
-            "type": "Bachelor’s Project",
+            "type": "Bachelor’s Project Re-Done",
             "name": "CouponShare",
-            "description": "Developed a project for a friend while learning the language.",
+            "image": "/CouponShare.png",
+            "description": "CouponShare is a community-powered platform designed to help users find, share, and save with the best discount codes, promo offers, and deals across various categories. Whether it’s shopping, food delivery, subscriptions, or local services, CouponShare enables users to contribute and benefit in real time.",
             "techStack": ["html", "css", "js", "php", "mysql"],
             "visitLink": "",
             "codeLink": "https://github.com/Joyal-George-KJ",
         },
         {
-            "type": "Bachelor’s Project",
-            "name": "Frontend Challenges",
-            "description": "Completed multiple frontend challenges from Frontend Mentor and iCodeThis.",
+            "type": "Production Grade Project",
+            "name": "EpicLibrary",
+            "image": "/EpicLibrary.png",
+            "description": "EpicLibrary is an entertainment tracking platform that lets users explore and track their favorite anime, movies, TV series, books, and manga—all in one place. Whether you're a binge-watcher or bookworm, EpicLibrary helps you stay organized while discovering new favorites.",
             "techStack": ["html", "css", "js","react", "tailwind"],
             "visitLink": "https://www.frontendmentor.io/profile/Joyal-George-KJ",
             "codeLink": "https://github.com/Joyal-George-KJ",
@@ -108,7 +110,6 @@ const data = {
         "React DOM",
         "React Redux",
         "Appwrite",
-        "MUI"
     ]
 }
 
