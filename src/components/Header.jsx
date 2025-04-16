@@ -5,21 +5,7 @@ import { useSelector } from "react-redux";
 
 function Header() {
     const [toggle, setToggle] = useState(false);
-    const [isDarkMode, setIsDarkMode] = useState(false);
-    
     const {name} = useSelector((state) => state.data);
-
-    useEffect(() => {
-        const darkModeMediaQuery = window.matchMedia(
-            "(prefers-color-scheme: dark)"
-        );
-        setIsDarkMode(darkModeMediaQuery.matches);
-
-        const listener = (e) => setIsDarkMode(e.matches);
-        darkModeMediaQuery.addEventListener("change", listener);
-
-        return () => darkModeMediaQuery.removeEventListener("change", listener);
-    }, []);
 
     return (
         <header className="sticky top-0 z-30">
