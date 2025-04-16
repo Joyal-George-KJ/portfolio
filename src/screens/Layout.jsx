@@ -15,7 +15,7 @@ function Layout() {
     }, []);
 
     return (
-        <div>
+        <div className="*:transition-colors duration-500 ease-in-out">
             <Effects height={height} width={width} />
             <Header />
             <Outlet />
