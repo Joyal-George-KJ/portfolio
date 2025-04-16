@@ -19,8 +19,9 @@ function Project() {
                             name={val.name}
                             description={val.description}
                             image={
-                                "https://images.pexels.com/photos/1779487/pexels-photo-1779487.jpeg?auto=compress&cs=tinysrgb&w=600"
+                                val.image
                             }
+                            
                             projectType={val.type}
                             techStack={val.techStack}
                             codeLink={val.codeLink}
