@@ -16,6 +16,7 @@ function ProjectCard({
 }) {
     const cardRef = useRef(null);
     const isVisible = useViewportCheck(cardRef);
+    const baseURL = window.location.origin
 
     return (
         <div
@@ -33,7 +34,7 @@ function ProjectCard({
             <div className="flex flex-wrap gap-6 mt-4">
                 <img
                     className="w-full lg:w-full rounded-lg object-cover shadow-md"
-                    src={image}
+                    src={baseURL + image}
                     alt="Project Image"
                 />
 
