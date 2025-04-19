@@ -18,7 +18,7 @@ function Footer() {
             <a href="https://devicon.dev/" target="_blank" rel="noopener noreferrer" className="text-info mx-1">Devicon</a>.
           </p>
           <p>
-            <strong>React JS, React DOM, React Redux, Appwrite, MUI</strong>.
+            <strong>React JS, React DOM, React Redux, Appwrite</strong>.
           </p>
         </div>
 
