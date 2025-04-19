@@ -1,6 +1,4 @@
-import React, { useEffect, useRef, useState } from "react";
-import { Button } from "@mui/material";
-import stacks from "../constants/stacks";
+import React, { useRef } from "react";
 import "../index.css";
 import useViewportCheck from "../hooks/useViewportCheck";
 
@@ -16,12 +14,11 @@ function ProjectCard({
 }) {
     const cardRef = useRef(null);
     const isVisible = useViewportCheck(cardRef);
-    const baseURL = window.location.origin
 
     return (
         <div
             ref={cardRef}
-            className={`mt-6 h-fit fadeIn dark:bg-gray-800 bg-gray-200 p-6 rounded-2xl shadow-lg transition-transform transform hover:scale-[1.02] ${
+            className={`h-fit fadeIn dark:bg-gray-800 bg-gray-200 p-6 rounded-2xl shadow-lg transition-transform transform hover:scale-[1.02] ${
                 isVisible ? "in-view" : ""
             }`}
         >
@@ -34,7 +31,9 @@ function ProjectCard({
             <div className="flex flex-wrap gap-6 mt-4">
                 <img
                     className="w-full lg:w-full rounded-lg object-cover shadow-md"
-                    src={baseURL + image}
+                    width={400}
+                    height={300}
+                    src={import.meta.env.VITE_STORE_URL + image}
                     alt="Project Image"
                 />
 
@@ -48,26 +47,26 @@ function ProjectCard({
 
                     <div className="text-3xl flex gap-4 flex-wrap">
                         {techStack.map((tech) => (
-                            <i key={tech} className={`devicon-${stacks[tech]} colored`}></i>
+                            <i key={tech} className={`devicon-${tech} colored`}></i>
                         ))}
                     </div>
 
                     <div className="flex w-full gap-4 pt-4">
-                        <a href={codeLink} target="_blank" rel="noreferrer">
-                            <Button
+                        <a href={"https://github.com/Joyal-George-KJ" + codeLink} target="_blank" rel="noreferrer">
+                            <button
                                 variant="outlined"
-                                className="dark:text-white text-black border-gray-600 dark:border-gray-500 hover:border-blue-400"
+                                className="text-blue-700 hover:shadow-md border border-blue-700 px-4 py-2 rounded-md hover:border-blue-600 hover:text-blue-600"
                             >
                                 View Code
-                            </Button>
+                            </button>
                         </a>
                         <a href={visitLink} target="_blank" rel="noreferrer">
-                            <Button
+                            <button
                                 variant="contained"
-                                className="dark:bg-blue-500 hover:bg-blue-600"
+                                className="bg-blue-500 text-white px-4 py-2 rounded-md hover:bg-blue-600"
                             >
                                 View Site
-                            </Button>
+                            </button>
                         </a>
                     </div>
                 </div>
