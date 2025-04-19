@@ -2,7 +2,7 @@ import React from "react";
 
 function Introduction() {
     return (
-        <div className="dark:bg-gray-900 bg-gray-100 dark:text-neutral-100 text-neutral-900 mobile:p-8 tablet:p-16 laptop:p-24 shadow-lg transition-transform transform hover:scale-[1.02]">
+        <div className="dark:bg-gray-800 bg-gray-100 dark:text-neutral-100 text-neutral-900 mobile:p-8 tablet:p-16 laptop:p-24 shadow-lg transition-transform transform hover:scale-[1.02]">
             <h3 className="text-xl md:text-3xl font-bold dark:text-blue-400 text-blue-600">
                 Hey there! 👋
             </h3>
