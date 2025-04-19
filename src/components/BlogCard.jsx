@@ -6,7 +6,7 @@ function BlogCard({ blogImage }) {
     date = `${Months[date.getMonth()]} ${date.getDate()}, ${date.getFullYear()}`;
 
     return (
-        <div className="dark:bg-neutral-800 bg-neutral-200 p-5 rounded-2xl shadow-lg transition-transform transform hover:scale-[1.02]">
+        <div className="dark:bg-gray-800 bg-gray-200 p-5 rounded-2xl shadow-lg transition-transform transform hover:scale-[1.02]">
             <div className="overflow-hidden rounded-lg">
                 <img
                     src={blogImage}
