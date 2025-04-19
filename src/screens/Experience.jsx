@@ -1,9 +1,12 @@
 import * as React from "react";
-import { useSelector } from "react-redux";
 import ExperienceCard from "../components/ExperienceCard";
+import useAppwrite from "../hooks/useAppwrite";
 
 export default function ExperienceTimeline() {
-    const { experience } = useSelector((state) => state.data);
+    const { data, loading, error } = useAppwrite(
+            import.meta.env.VITE_PERSONAL_EXPERIENCE_ID
+        );
+        
     return (
         <div className="font-mono text-lg py-8 min-h-screen laptop:px-24">
             <div className="relative z-10 p-6 rounded-lg bg-opacity-20">
@@ -13,8 +16,7 @@ export default function ExperienceTimeline() {
 
                 <div className="flex mt-6">
                     <ul className="flex flex-col even:flex-col-reverse gap-4">
-                        {experience
-                            .slice()
+                        {data
                             .reverse()
                             .map((val, index) => (
                                 <ExperienceCard title={val.title} year={val.year} event={val.event} key={index} />
