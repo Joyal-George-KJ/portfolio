@@ -5,7 +5,7 @@ import { useSelector } from "react-redux";
 
 function Header() {
     const [toggle, setToggle] = useState(false);
-    const {name} = useSelector((state) => state.data);
+    const { name } = useSelector((state) => state.data);
 
     return (
         <header className="sticky top-0 z-30">
@@ -48,9 +48,13 @@ function Header() {
                         >
                             About
                         </Link>
-                        <button className="bg-purple-600 text-white px-4 py-2 rounded-lg hover:bg-purple-700 transition">
+                        <a
+                            href="http://localhost:5173/JoyalGeorgeKJ.pdf"
+                            download={"http://localhost:5173/JoyalGeorgeKJ.pdf"}
+                            className="bg-purple-600 text-white px-4 py-2 rounded-lg hover:bg-purple-700 transition"
+                        >
                             Resume
-                        </button>
+                        </a>
                         <ThemeToggle />
                     </div>
                 ) : (
@@ -80,9 +84,15 @@ function Header() {
                             </Link>
                         </li>
                         <li className="cursor-pointer">
-                            <button className="bg-purple-600 text-white px-4 py-2 rounded-lg hover:bg-purple-700 transition duration-300">
+                            <a
+                                href={location.origin + "/JoyalGeorgeKJ.pdf"}
+                                download={
+                                    "JoyalGeorgeKJ.pdf"
+                                }
+                                className="bg-purple-600 text-white px-4 py-2 rounded-lg hover:bg-purple-700 transition"
+                            >
                                 Resume
-                            </button>
+                            </a>
                         </li>
                         <li className="cursor-pointer">
                             <ThemeToggle />
