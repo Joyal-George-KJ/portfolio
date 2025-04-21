@@ -55,7 +55,7 @@ function ProjectCard({
                         <a href={"https://github.com/Joyal-George-KJ" + codeLink} target="_blank" rel="noreferrer">
                             <button
                                 variant="outlined"
-                                className="text-blue-700 hover:shadow-md border border-blue-700 px-4 py-2 rounded-md hover:border-blue-600 hover:text-blue-600"
+                                className="text-blue-500 hover:shadow-md border border-blue-500 px-4 py-2 rounded-md hover:border-blue-600 hover:text-blue-600"
                             >
                                 View Code
                             </button>
