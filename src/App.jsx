@@ -1,6 +1,7 @@
 import { CircularProgress } from "@mui/material";
 import React, { lazy, Suspense } from "react";
 import { BrowserRouter, Route, Routes } from "react-router-dom";
+const Post = lazy(() => import("./screens/Post"));
 const Home = lazy(() => import("./screens/Home"));
 const Layout = lazy(() => import("./screens/Layout"));
 const Blog = lazy(() => import("./screens/Blog"));
@@ -48,6 +49,14 @@ function App() {
                         element={
                             <Suspense fallback={<Loading />}>
                                 <About />
+                            </Suspense>
+                        }
+                    />
+                    <Route
+                        path="/blog/:id"
+                        element={
+                            <Suspense fallback={<Loading />}>
+                                <Post />
                             </Suspense>
                         }
                     />
