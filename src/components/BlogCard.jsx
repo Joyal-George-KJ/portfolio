@@ -39,7 +39,6 @@ function BlogCard({ image, date, title, description, tags, id = undefined }) {
                         <Markdown>{description.slice(0, 100) + "..."}
                         </Markdown>
                     </a>
-                )}
                 <div className="flex flex-wrap gap-2 mt-3">
                     {tags.map((tag, index) => (
                         <span
