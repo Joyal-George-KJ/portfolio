@@ -23,6 +23,7 @@ function Project() {
                         <ProjectCard
                             index={ind + 1}
                             key={ind}
+                            id={val.$id}
                             name={val.name}
                             description={val.description}
                             image={val.image}
