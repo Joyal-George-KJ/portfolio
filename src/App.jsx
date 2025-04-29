@@ -53,7 +53,15 @@ function App() {
                         }
                     />
                     <Route
-                        path="/blog/:id"
+                        path="/:path/:id"
+                        element={
+                            <Suspense fallback={<Loading />}>
+                                <Post />
+                            </Suspense>
+                        }
+                    />
+                    <Route
+                        path="/:path/:id"
                         element={
                             <Suspense fallback={<Loading />}>
                                 <Post />
