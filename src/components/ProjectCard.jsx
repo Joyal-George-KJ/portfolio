@@ -1,9 +1,11 @@
 import React, { useRef } from "react";
 import "../index.css";
 import useViewportCheck from "../hooks/useViewportCheck";
+import { NavLink, useNavigate } from "react-router-dom";
 
 function ProjectCard({
     index,
+    id,
     name,
     description,
     image,
@@ -13,10 +15,14 @@ function ProjectCard({
     techStack,
 }) {
     const cardRef = useRef(null);
+    const navigate = useNavigate();
     const isVisible = useViewportCheck(cardRef);
 
     return (
         <div
+        onClick={() => {
+            navigate("/project/" + id);
+        }}
             ref={cardRef}
             className={`h-fit fadeIn dark:bg-gray-800 bg-gray-200 p-6 rounded-2xl shadow-lg transition-transform transform hover:scale-[1.02] ${
                 isVisible ? "in-view" : ""

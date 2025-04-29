@@ -12,7 +12,7 @@ function formatDateToDDMMYYYY(dateString) {
     return `${day}-${month}-${year}`;
 }
 
-function BlogCard({ image, date, title, description, tags, id = undefined }) {
+function BlogCard({ image, date, title, description, tags, id = undefined, ...props }) {
     date = formatDateToDDMMYYYY(date);
 
     return (
@@ -36,7 +36,7 @@ function BlogCard({ image, date, title, description, tags, id = undefined }) {
                         <h4 className="text-2xl font-semibold text-blue-400 mt-1">
                             {title}
                         </h4>
-                        <Markdown>{description.slice(0, 100) + "..."}
+                        <Markdown components={props?.markdownComponent}>{props.full ? description : (description.slice(0, 100) + "...")}
                         </Markdown>
                     </a>
                 <div className="flex flex-wrap gap-2 mt-3">
