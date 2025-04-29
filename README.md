@@ -53,9 +53,13 @@ npm run dev
 > ✅ Make sure to set up a `.env` file:
 
 ```env
-VITE_STORE_URL=your-appwrite-bucket-url
-VITE_PERSONAL_PROJECT_ID=your-project-id
-VITE_PERSONAL_BLOG_ID=your-blog-id
+VITE_BASE_URL = "https://fra.cloud.appwrite.io/v1"
+VITE_STORE_URL = "Store Name"
+VITE_PROJECT_ID = "666************"
+VITE_DATABASE_ID = "666*************"
+VITE_PERSONAL_PROJECT_ID = "666***********"
+VITE_PERSONAL_BLOG_ID = "680*************"
+VITE_PERSONAL_EXPERIENCE_ID = "680***********"
 ```
 
 ---
