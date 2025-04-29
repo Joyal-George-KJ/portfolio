@@ -3,14 +3,6 @@
 
 This is my personal portfolio website built using modern frontend technologies like **React JS**, **Tailwind CSS**, **Appwrite**, **React Redux**, and **React Router DOM**. It showcases my projects, blog posts, and a little about me – all hosted seamlessly on **Vercel**.
 
----
-
-## 🚀 Live Site
-
-🔗 [https://joyalgeorgekj.com](https://joyalgeorgekj.com)
-
----
-
 ## 🛠️ Tech Stack
 
 - **React JS** – Component-based UI library
