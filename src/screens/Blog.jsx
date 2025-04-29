@@ -8,8 +8,6 @@ function Blog() {
         import.meta.env.VITE_PERSONAL_BLOG_ID
     );
 
-    console.log(data);
-
     if (error) return <p>Something went wrong.</p>;
     return (
         <div className="font-mono text-lg laptop:py-8 min-h-screen laptop:px-24">
