@@ -4,14 +4,6 @@ import useAppwrite from "../hooks/useAppwrite";
 import BlogCard from "../components/BlogCard";
 import ProjectCard from "../components/ProjectCard";
 
-function formatDateToDDMMYYYY(dateString) {
-    const date = new Date(dateString);
-    const day = String(date.getDate()).padStart(2, "0"); // Add leading zero
-    const month = String(date.getMonth() + 1).padStart(2, "0"); // Months are zero-based
-    const year = date.getFullYear();
-
-    return `${day}-${month}-${year}`;
-}
 
 function Post() {
     const { id, path } = useParams();
