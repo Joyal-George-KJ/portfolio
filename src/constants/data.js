@@ -24,8 +24,8 @@ const data = {
     "socials": [
         {
             "name": "Instagram",
-            "handle": "@_.i.m_fine_",
-            "url": "https://www.instagram.com/_.i.m_fine_/"
+            "handle": "@joyalgeorgekj",
+            "url": "https://www.instagram.com/joyalgeorgekj/"
         },
         {
             "name": "LinkedIn",
