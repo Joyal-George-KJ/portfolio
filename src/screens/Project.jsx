@@ -16,7 +16,7 @@ function Project() {
                 <h1 className="mobile:text-2xl tablet:text-3xl laptop:text-4xl mobile:border-b tablet:border-b-2 laptop:border-b-4 font-bold dark:text-blue-400 text-blue-600 border-blue-600 dark:border-blue-500 pb-3">
                     Project
                 </h1>
-                <div className="grid mobile:grid-cols-1 laptop:grid-cols-2 gap-4 mt-6">
+                <div className="grid laptop:grid-cols-1 tv:grid-cols-2 gap-4 mt-6">
                     {(loading || !data) &&
                         [...Array(2)].map((_, i) => <CardLoader key={i} />)}
                     {data?.map((val, ind) => (
