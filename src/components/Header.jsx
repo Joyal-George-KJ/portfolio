@@ -1,11 +1,17 @@
-import React, { useState, useEffect } from "react";
-import { Link } from "react-router-dom";
+import { useState, useEffect } from "react";
+import { Link, useLocation } from "react-router-dom";
 import ThemeToggle from "./ThemeToggle";
 import { useSelector } from "react-redux";
 
 function Header() {
+    const location = useLocation();
     const [toggle, setToggle] = useState(false);
+    const [path, setPath] = useState(location.pathname.slice(1));
     const { name } = useSelector((state) => state.data);
+
+    useEffect(() => {
+        setPath(location.pathname.slice(1));
+    }, [location.pathname]);
 
     return (
         <header className="sticky top-0 z-30">
