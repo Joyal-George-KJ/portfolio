@@ -23,7 +23,10 @@ function Header() {
                     <li className="cursor-pointer list-none h-7 grid place-items-center font-bold">
                         <Link
                             to="/"
-                            className="hover:text-purple-500 transition duration-300"
+                            className={
+                                "text-purple-500 transition duration-300" +
+                                (path === "" ? " text-purple-500 underline underline-offset-8" : "")
+                            }
                         >
                             {name}
                         </Link>
@@ -36,21 +39,30 @@ function Header() {
                         <Link
                             onClick={() => setToggle(false)}
                             to="/blog"
-                            className="hover:text-purple-500 transition"
+                            className={
+                                "hover:text-purple-500 transition" +
+                                (path === "blog" ? " text-purple-500" : "")
+                            }
                         >
                             Blog
                         </Link>
                         <Link
                             onClick={() => setToggle(false)}
                             to="/project"
-                            className="hover:text-purple-500 transition"
+                            className={
+                                "hover:text-purple-500 transition" +
+                                (path === "project" ? " text-purple-500" : "")
+                            }
                         >
                             Project
                         </Link>
                         <Link
                             onClick={() => setToggle(false)}
                             to="/about"
-                            className="hover:text-purple-500 transition"
+                            className={
+                                "hover:text-purple-500 transition" +
+                                (path === "about" ? " text-purple-500" : "")
+                            }
                         >
                             About
                         </Link>
@@ -68,7 +80,10 @@ function Header() {
                         <li className="cursor-pointer">
                             <Link
                                 to="/blog"
-                                className="hover:text-purple-500 transition duration-300"
+                                className={
+                                    "hover:text-purple-500 transition duration-300" +
+                                    (path === "blog" ? " text-purple-500" : "")
+                                }
                             >
                                 Blog
                             </Link>
@@ -76,7 +91,12 @@ function Header() {
                         <li className="cursor-pointer">
                             <Link
                                 to="/project"
-                                className="hover:text-purple-500 transition duration-300"
+                                className={
+                                    "hover:text-purple-500 transition duration-300" +
+                                    (path === "project"
+                                        ? " text-purple-500"
+                                        : "")
+                                }
                             >
                                 Project
                             </Link>
@@ -84,7 +104,10 @@ function Header() {
                         <li className="cursor-pointer">
                             <Link
                                 to="/about"
-                                className="hover:text-purple-500 transition duration-300"
+                                className={
+                                    "hover:text-purple-500 transition duration-300" +
+                                    (path === "about" ? " text-purple-500" : "")
+                                }
                             >
                                 About
                             </Link>
