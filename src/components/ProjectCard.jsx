@@ -1,7 +1,7 @@
-import React, { useRef } from "react";
+import { useRef } from "react";
 import "../index.css";
 import useViewportCheck from "../hooks/useViewportCheck";
-import { NavLink, useNavigate } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 
 function ProjectCard({
     index,
@@ -20,18 +20,18 @@ function ProjectCard({
 
     return (
         <div
-        onClick={() => {
-            navigate("/project/" + id);
-        }}
+            onClick={() => {
+                navigate("/project/" + id);
+            }}
             ref={cardRef}
             className={`h-fit fadeIn dark:bg-gray-800 bg-gray-200 p-6 rounded-2xl shadow-lg transition-transform transform hover:scale-[1.02] ${
                 isVisible ? "in-view" : ""
             }`}
         >
             <div className="flex justify-between items-center">
-                <h3 className="font-mono uppercase text-gray-700 dark:text-gray-300">
+                <h2 className="font-mono uppercase text-gray-700 dark:text-gray-300">
                     {index} | {projectType}
-                </h3>
+                </h2>
             </div>
 
             <div className="flex flex-wrap gap-6 mt-4">
@@ -39,6 +39,7 @@ function ProjectCard({
                     className="w-full lg:w-full rounded-lg object-cover shadow-md"
                     width={400}
                     height={300}
+                    loading="lazy"
                     src={import.meta.env.VITE_STORE_URL + image}
                     alt="Project Image"
                 />
@@ -53,12 +54,21 @@ function ProjectCard({
 
                     <div className="text-3xl flex gap-4 flex-wrap">
                         {techStack.map((tech) => (
-                            <i key={tech} className={`devicon-${tech} colored`}></i>
+                            <i
+                                key={tech}
+                                className={`devicon-${tech} colored`}
+                            ></i>
                         ))}
                     </div>
 
                     <div className="flex w-full gap-4 pt-4">
-                        <a href={"https://github.com/Joyal-George-KJ" + codeLink} target="_blank" rel="noreferrer">
+                        <a
+                            href={
+                                "https://github.com/Joyal-George-KJ" + codeLink
+                            }
+                            target="_blank"
+                            rel="noreferrer"
+                        >
                             <button
                                 variant="outlined"
                                 className="text-blue-500 hover:shadow-md border border-blue-500 px-4 py-2 rounded-md hover:border-blue-600 hover:text-blue-600"
