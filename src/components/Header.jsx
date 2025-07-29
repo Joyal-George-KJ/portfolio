@@ -8,6 +8,7 @@ function Header() {
     const [toggle, setToggle] = useState(false);
     const [path, setPath] = useState(location.pathname.slice(1));
     const { name } = useSelector((state) => state.data);
+    const [origin, setOrigin] = useState('');
 
     useEffect(() => {
         setPath(location.pathname.slice(1));
