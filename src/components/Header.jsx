@@ -14,6 +14,13 @@ function Header() {
         setPath(location.pathname.slice(1));
     }, [location.pathname]);
 
+
+      useEffect(() => {
+        if (typeof window !== 'undefined' && window.location && window.location.origin) {
+          setOrigin(window.location.origin);
+        }
+      }, []);
+
     return (
         <header className="sticky top-0 z-30">
             <nav
