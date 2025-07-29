@@ -75,8 +75,8 @@ function Header() {
                             About
                         </Link>
                         <a
-                            href={location.origin + "/JoyalGeorgeKJ.pdf"}
-                            download={"JoyalGeorgeKJ.pdf"}
+                            href={`${origin}/JoyalGeorgeKJ.pdf`}
+                            download={"Joyal George K J.pdf"}
                             className="bg-purple-600 text-white px-4 py-2 rounded-lg hover:bg-purple-700 transition"
                         >
                             Resume
@@ -122,8 +122,8 @@ function Header() {
                         </li>
                         <li className="cursor-pointer">
                             <a
-                                href={location.origin + "/JoyalGeorgeKJ.pdf"}
-                                download={"JoyalGeorgeKJ.pdf"}
+                                href={`${origin}/JoyalGeorgeKJ.pdf`}
+                                download={"Joyal George K J.pdf"}
                                 className="bg-purple-600 text-white px-4 py-2 rounded-lg hover:bg-purple-700 transition"
                             >
                                 Resume
